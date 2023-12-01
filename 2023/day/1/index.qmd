@@ -42,19 +42,21 @@ input[1:3]
 dat_numbers[1:3]
 ```
 
-Now drop the middle values.
+Now drop the middle values by extracting the first and last number.
 ```{r}
-dat_first_last <- str_extract_all(dat_numbers, regex("^[:digit:]|[:digit:]$"))
+dat_first <- str_extract_all(dat_numbers, regex("^[:digit:]"), simplify = TRUE)
+dat_last <- str_extract_all(dat_numbers, regex("[:digit:]$"), simplify = TRUE)
 ```
 
 Inspect results.
 ```{r}
-dat_first_last[1:3]
+dat_first[1:3]
+dat_last[1:3]
 ```
 
-This creates a list, which can be manipulated with `apply` functions.
+Now concatenate the first and last value.
 ```{r}
-dat_values <- lapply(dat_first_last, str_c, collapse = "")
+dat_values <- str_c(dat_first, dat_last)
 ```
 
 Inspect.
@@ -62,9 +64,9 @@ Inspect.
 dat_values[1:3]
 ```
 
-These can be unlisted and converted to numeric.
+These can be converted to numeric.
 ```{r}
-dat_vector <- as.numeric(unlist(dat_values))
+dat_vector <- as.numeric(dat_values)
 ```
 
 Check.

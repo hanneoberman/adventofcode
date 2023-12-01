@@ -26,6 +26,7 @@ Load the necessary packages and input.
 #| eval: !expr OK
 library(aochelpers)
 library(stringr)
+library(purrr)
 # other options: aoc_input_data_frame(), aoc_input_matrix()
 input <- aoc_input_vector(1, 2023)
 head(input)
@@ -79,7 +80,37 @@ Finally, add all values in the vector with calibration values.
 sum(dat_vector)
 ```
 
-
 ## Part 2
 
+Add vector with viable textual values.
+```{r}
+text_values <- c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+num_values <- as.character(1:9)
+```
+
+Before removing the letters, convert textual values to numbers.
+```{r}
+dat_input <- input
+dat_replaced <- purrr::map2(text_values, num_values, ~{
+	dat_input <<- str_replace_all(dat_input, .x, .y)
+})[[9]]
+```
+
+Check if there are still values as text.
+```{r}
+dat_replaced[1:3]
+```
+
+Repeat above steps.
+```{r}
+dat_numbers <- str_remove_all(dat_replaced, regex("[:alpha:]"))
+dat_first <- str_extract_all(dat_numbers, regex("^[:digit:]"), simplify = TRUE)
+dat_last <- str_extract_all(dat_numbers, regex("[:digit:]$"), simplify = TRUE)
+dat_values <- str_c(dat_first, dat_last)
+```
+
+Compute total.
+```{r}
+sum(as.numeric(dat_values))
+```
 

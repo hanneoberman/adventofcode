@@ -15,7 +15,6 @@ website:
   repo-url: https://github.com/EllaKaye/advent-of-code-website-template
   navbar:
     left:
-     - 2022.qmd
      - 2023.qmd
     right:
       - icon: github

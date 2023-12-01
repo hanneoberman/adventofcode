@@ -1,0 +1,14 @@
+{
+  "hash": "15da1b0e22b4044223a660aa9015d52b",
+  "result": {
+    "markdown": "---\ntitle: \"2023: Day 1\"\ndate: 2023-12-1\ncategories:\n  - TAG_1\n  - TAG_2\ndraft: false\n---\n\n\n## Setup\n\n[The original challenge](https://adventofcode.com/2023/day/1)\n\n[My data](input){target=\"_blank\"}\n\n## Part 1\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(aochelpers)\n# other options: aoc_input_data_frame(), aoc_input_matrix()\ninput <- aoc_input_vector(1, 2023)\nhead(input)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"qzjggk1one\"                        \"two2seven7\"                       \n[3] \"vszthreetwo6threethree4two3\"       \"zcsvvlslqvfive11chhzmdjdgz8vbgldl\"\n[5] \"jjsmsksvbr77cfdrdseven1zd\"         \"947lkkgznlhxseventwo\"             \n```\n:::\n:::\n\n\n## Part 2\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

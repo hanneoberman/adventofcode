@@ -1,0 +1,105 @@
+---
+title: "2023: Day 4"
+date: 2023-12-4
+categories:
+  - R
+draft: false
+---
+
+## Setup
+
+[The original challenge](https://adventofcode.com/2023/day/4)
+
+[My data](input){target="_blank"}
+
+## Part 1
+
+```{r}
+#| echo: false
+OK <- "2023" < 3000
+# Will only evaluate next code block if an actual year has been substituted for the placeholder
+```
+
+
+```{r}
+#| eval: !expr OK
+library(aochelpers)
+# other options: aoc_input_data_frame(), aoc_input_matrix()
+input <- aoc_input_vector(4, 2023)
+head(input)
+```
+
+Convert to dataframe then split into winning numbers and scratch numbers.
+```{r}
+dat <- read.table(text = input)
+dat_win <- dat[, 3:12]
+dat_own <- dat[, 14:38]
+```
+
+Check how many of the numbers in row 1 are wins.
+```{r}
+dat_own[1, ] %in% dat_win[1, ] |> 
+	sum()
+```
+
+With 4 winning numbers, row 1 yields 16 points.
+```{r}
+2^4
+```
+
+This can be converted to a function.
+```{r}
+exponentiate <- \(x) {2^(x) - 2^(x-1)}
+```
+
+Test the function.
+```{r}
+exponentiate(4)
+```
+
+Now, apply this to all rows.
+```{r}
+row_sums <- purrr::map_dbl(1:nrow(dat), ~{
+	dat_own[.x, ] %in% dat_win[.x, ] |> 
+		sum() |>
+		exponentiate()
+})
+```
+
+Then add the row values to obtain the total.
+```{r}
+sum(row_sums)
+```
+
+This does not yield an integer, which is unexpected. The culpit is the value 0.
+```{r}
+exponentiate(0)
+```
+
+The function should be adapted to allow for 0 wins.
+```{r}
+exponentiate <- function(x) {
+	if (x == 0) {return(x)}
+	if (x > 0) {2^(x) - 2^(x - 1)}
+	}
+```
+
+Test again.
+```{r}
+exponentiate(0)
+```
+
+And compute the total.
+```{r}
+purrr::map_dbl(1:nrow(dat), ~{
+	dat_own[.x, ] %in% dat_win[.x, ] |> 
+		sum() |>
+		exponentiate()
+}) |> sum()
+```
+
+
+
+## Part 2
+
+

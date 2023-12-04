@@ -1,0 +1,14 @@
+{
+  "hash": "328872d2fa8eb80d9adcdc463ff9e63a",
+  "result": {
+    "markdown": "---\ntitle: \"2023: Day 2\"\ndate: 2023-12-2\ncategories:\n  - TAG_1\n  - TAG_2\ndraft: false\n---\n\n\n## Setup\n\n[The original challenge](https://adventofcode.com/2023/day/2)\n\n[My data](input){target=\"_blank\"}\n\n## Part 1\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(aochelpers)\n# other options: aoc_input_data_frame(), aoc_input_matrix()\ninput <- aoc_input_data_frame(2, 2023)\nhead(input)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 6 × 2\n  X1     X2                                                                     \n  <chr>  <chr>                                                                  \n1 Game 1 \" 4 red, 5 blue, 9 green; 7 green, 7 blue, 3 red; 16 red, 7 blue, 3 gr…\n2 Game 2 \" 12 blue, 11 green, 3 red; 6 blue, 5 green, 7 red; 5 red, 11 blue; 2 …\n3 Game 3 \" 8 blue, 5 green, 2 red; 5 blue, 5 green, 7 red; 7 blue, 1 green, 7 r…\n4 Game 4 \" 3 red, 14 blue, 15 green; 1 red, 11 green, 14 blue; 14 green, 17 blu…\n5 Game 5 \" 11 green, 2 red, 10 blue; 16 green, 8 blue; 2 blue, 6 green, 1 red; …\n6 Game 6 \" 2 green, 5 red, 17 blue; 12 green, 13 blue, 6 red; 8 red, 9 blue, 7 …\n```\n:::\n:::\n\n\n\n## Part 2\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

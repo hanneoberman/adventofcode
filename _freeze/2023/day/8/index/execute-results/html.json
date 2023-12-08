@@ -1,0 +1,14 @@
+{
+  "hash": "be05afbdffd95cebf6d88ed0b767ffab",
+  "result": {
+    "markdown": "---\ntitle: \"2023: Day 8\"\ndate: 2023-12-8\ncategories:\n  - TAG_1\n  - TAG_2\ndraft: false\n---\n\n\n## Setup\n\n[The original challenge](https://adventofcode.com/2023/day/8)\n\n[My data](input){target=\"_blank\"}\n\n## Part 1\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(aochelpers)\n# other options: aoc_input_data_frame(), aoc_input_matrix()\ninput <- aoc_input_vector(8, 2023)\nhead(input)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"LLLLRLRLRRLRRRLRRLRLRRLRLLRRRLRRLRRRLRLLLRLRRLRLLRRRLRRLRLRRLLRRRLRRRLRLRRLRRRLRRLRRLLRRRLLLLRRLRRLRRLRRRLLLRLRLRLRRLRRRLRLRRRLRLRRRLRRLRRLLRRLLRLRRRLRLRRRLLLRLRRRLRLRRRLRRLRLRRLRRRLRRRLRRLLLRRRLRRLRRLRRLRRRLLLRRLRLRRRLLLLRRRLRRLRRRLLRLRLRRLLRRRLLRLRLRLRRLRRLRRRLRRLLRLRRLRRLLLLRRLRLRRLLRRLLRRLRRLRRRLLLRRRR\"\n[2] \"\"                                                                                                                                                                                                                                                                                                                   \n[3] \"BRR = (LVC, FSJ)\"                                                                                                                                                                                                                                                                                                   \n[4] \"BHX = (GMG, QTN)\"                                                                                                                                                                                                                                                                                                   \n[5] \"TJD = (HQF, PBJ)\"                                                                                                                                                                                                                                                                                                   \n[6] \"JGN = (JXR, DGK)\"                                                                                                                                                                                                                                                                                                   \n```\n:::\n:::\n\n\n## Part 2\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

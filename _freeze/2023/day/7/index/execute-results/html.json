@@ -1,0 +1,14 @@
+{
+  "hash": "5d97df979c73030b7f87abcbcd742822",
+  "result": {
+    "markdown": "---\ntitle: \"2023: Day 7\"\ndate: 2023-12-7\ncategories:\n  - TAG_1\n  - TAG_2\ndraft: false\n---\n\n\n## Setup\n\n[The original challenge](https://adventofcode.com/2023/day/7)\n\n[My data](input){target=\"_blank\"}\n\n## Part 1\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(aochelpers)\n# other options: aoc_input_data_frame(), aoc_input_matrix()\ninput <- aoc_input_vector(7, 2023)\nhead(input)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"3Q373 470\" \"K53JT 351\" \"A9JK9 856\" \"2T333 515\" \"867T4 541\" \"58K22 253\"\n```\n:::\n:::\n\n\n## Part 2\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

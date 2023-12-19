@@ -1,0 +1,35 @@
+---
+title: "2023: Day 10"
+date: 2023-12-10
+categories:
+  - TAG_1
+  - TAG_2
+draft: false
+---
+
+## Setup
+
+[The original challenge](https://adventofcode.com/2023/day/10)
+
+[My data](input){target="_blank"}
+
+## Part 1
+
+```{r}
+#| echo: false
+OK <- "2023" < 3000
+# Will only evaluate next code block if an actual year has been substituted for the placeholder
+```
+
+
+```{r}
+#| eval: !expr OK
+library(aochelpers)
+# other options: aoc_input_data_frame(), aoc_input_matrix()
+input <- aoc_input_vector(10, 2023)
+head(input)
+```
+
+## Part 2
+
+
